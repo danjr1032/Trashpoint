@@ -25,8 +25,8 @@
           <div class="user-input-box">
             <input
               type="text"
-              id="phoneNumber"
-              name="phoneNumber"
+              id="phone"
+              name="phone"
               placeholder="Enter Phone Number"
             />
           </div>
@@ -62,10 +62,10 @@ const error = document.querySelector('#errorMessage');
 btn.addEventListener('click', async function (event) {
   event.preventDefault();
 
-  const phoneNumber = form.phoneNumber.value;
+  const phone = form.phone.value;
   const password = form.password.value;
 
-  if (!phoneNumber || !password) {
+  if (!phone || !password) {
     error.textContent = "All fields are required";
     return;  
   }
@@ -76,7 +76,7 @@ btn.addEventListener('click', async function (event) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ phoneNumber, password }), 
+      body: JSON.stringify({ phone, password }), 
     });
 
     if (response.ok) {

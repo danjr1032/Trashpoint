@@ -57,11 +57,11 @@
   
         <div class="contact">
           <h1>Contact Us</h1>
-          <form action="">
+          <form action="/contact" method="post">
             <input type="text" placeholder="Enter your Name" required/>
             <input type="email" placeholder="Enter a valid email address" required/>
             <textarea name="Message" placeholder="Message" cols="30" rows="5" required></textarea>
-            <button type="submit">SEND</button>
+            <button type="submit" class="btn">SEND</button>
   
             <p class="back"><a href="./index.html">HOME</a></p>
           </form>
@@ -151,5 +151,41 @@
         </div>
       </div>
     </footer>
+    <script>
+      const form = document.getElementById('message');
+      const submitBtn = document.querySelector('btn');
+      submitBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        sendMessage();
+      });
+
+      async function sendMessage() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        try {
+          const response = await fetch('https://trashpoint.onrender.com/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+          });
+
+          const data = await response.json();
+          if (response.ok) {
+            // Redirect to the dashboard or any other page after successful login
+            window.location.href = 'https://trashpoint.vercel.app/#';
+          } else {
+            document.getElementById('response').innerText = data.message;
+          }
+
+        } catch (error) {
+          console.error('Error sending user:', error);
+        }
+      }
+
+    </script>
   </body>
 </html>

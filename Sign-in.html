@@ -20,7 +20,7 @@
         <img src="./images/trashsign-uplogo.svg" alt="" width="120" height="120">
       <h2>SIGN-IN</h2>
       </div>
-     
+     <form action="/login" method="post">
         <main class="main">
           <div class="user-input-box">
             <input
@@ -38,7 +38,7 @@
               placeholder="Enter Password"
             />
           </div>
-          <a href="#">Forgot password?</a>
+          <p><a href="#">Forgot password?</a></p>
 
           <div class="sign-up">
             <input type="submit" value="Sign-in">
@@ -55,7 +55,7 @@
     </div>
 
     <script>
-      document.getElementById('signin').addEventListener('submit', function (event) {
+      document.getElementById('signin').addEventListener('click', function (event) {
             event.preventDefault();
             Signin();
           });

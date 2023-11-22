@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/new\ trash-bg.jpg");
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  font-family: "Catamaran", sans-serif;
+}
+.container {
+  min-width: 500px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: rgba(25, 54, 25, 0.61);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+}
+.logo-area img {
+  margin-inline: auto;
+  margin-block: 5px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  color: white;
+  border-bottom: solid 1px white;
+  font-weight: 800;
+  margin-top: -3rem;
+}
+.main {
+  width: 80%;
+}
+
+.user-input-box:first-child {
+  padding-top: 1rem;
+}
+.user-input-box {
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  padding-bottom: 10px;
+}
+
+.user-input-box input {
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0.5rem;
+  width: 25rem;
+}
+
+p {
+  margin-inline: auto;
+}
+.sign-up input {
+  background-color: #a5bcf0;
+  padding: 0.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  border: none;
+  margin-block: 1rem;
+  border-radius: 7px;
+  width: 25rem;
+}
+
+.sign-up a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.google {
+  padding: 0.5rem;
+  background-color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 1rem;
+  border-radius: 7px;
+  width: 25rem;
+}
+
+.google a {
+  color: black;
+  text-decoration: none;
+}
+
+.apple {
+  padding: 0.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  width: 25rem;
+}
+.apple a {
+  color: white;
+  text-decoration: none;
+}
+p {
+  text-align: center;
+  margin-left: 5rem;
+  color: white;
+}
+p a {
+  text-decoration: none;
+  color: #a5bcf0;
+  font-size: 1rem;
+}
+
+/* extra syle for sign-in */
+
+.user-input-box + a {
+  padding-left: 67%;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .container {
+    min-width: 300px;
+  }
+
+  .main {
+    width: 100%;
+  }
+  .user-input-box {
+    margin-bottom: 12px;
+  }
+}

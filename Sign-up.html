@@ -88,7 +88,7 @@
 
           if (response.ok) {
             // Redirect to the service page after successful signup
-            window.location.href = 'https://trashpoint.vercel.app/services.html';
+            location.href="https://trashpoint.vercel.app/services.html";
           } else {
             // Display the response message on the page
             document.getElementById('response').innerText = data.message;

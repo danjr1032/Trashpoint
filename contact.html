@@ -61,7 +61,7 @@
             <input type="text" placeholder="Enter your Name" required/>
             <input type="email" placeholder="Enter a valid email address" required/>
             <textarea name="Message" placeholder="Message" cols="30" rows="5" required></textarea>
-            <button type="submit" class="btn">SEND</button>
+            <button type="submit" id="btn">SEND</button>
   
             <p class="back"><a href="./index.html">HOME</a></p>
           </form>
@@ -152,9 +152,9 @@
       </div>
     </footer>
     <script>
-      const form = document.getElementById('message');
-      const submitBtn = document.querySelector('.btn');
-      submitBtn.addEventListener('click', function (event) {
+      const form = document.querySelector('#message');
+      const Btn = document.querySelector('#btn');
+      Btn.addEventListener('click', function (event) {
         event.preventDefault();
         sendMessage();
       });
@@ -163,7 +163,6 @@
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-
         try {
           const response = await fetch('https://trashpoint.onrender.com/contact', {
             method: 'POST',

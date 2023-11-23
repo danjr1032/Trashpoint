@@ -78,7 +78,7 @@ btn.addEventListener('click', async function (event) {
       },
       body: JSON.stringify({ phone, password })
       .then(response => {
-        if (response.redirected) {
+        if (response.ok) {
           window.location.href = "https://trashpoint.vercel.app/services.html";
         } else {
           document.getElementById('response').innerText = data.message;

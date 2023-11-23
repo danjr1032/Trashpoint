@@ -181,6 +181,7 @@
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ name, email, message })
+
             .then(response => {
               if (response.ok) {
                 window.location.href = "https://trashpoint.vercel.app/services.html";

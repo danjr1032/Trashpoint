@@ -160,12 +160,12 @@
 
 const form = document.getElementById('contact'); 
 const btn = document.getElementById('submit'); 
-form.addEventListener('submit', function (event) { 
+btn.addEventListener('click', function (event) { 
   event.preventDefault();
   contact();
 });
 
-async function contact() {
+async function contact(){
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
@@ -182,10 +182,8 @@ async function contact() {
     const data = await response.json();
 
     if (response.ok) {
-      // Redirect to the service page after successful signup
-      window.location.href = 'https://trashpoint.vercel.app/index.html'; // Use window.location.href for redirection
+      window.location.href = 'https://trashpoint.vercel.app/index.html'; 
     } else {
-      // Display the response message on the page
       document.getElementById('response').innerText = data.message;
     }
   } catch (error) {

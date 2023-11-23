@@ -57,7 +57,7 @@
   
         <div class="contact">
           <h1>Contact Us</h1>
-          <form action="https://trashpoint.onrender.com/contact"  method="post">
+          <form action="https://trashpoint.onrender.com/contact" id="contact" method="post">
             <input type="name" id="name" placeholder="Enter your Name" required/>
             <input type="email" id="email" placeholder="Enter a valid email address" required/>
             <textarea name="Message" id="message" placeholder="Message" cols="30" rows="5" required></textarea>
@@ -152,8 +152,11 @@
         </div>
       </div>
     </footer>
+
+
+
     <script>
-    const form = document.getElementById('form');
+    const form = document.getElementById('#contact');
     const btn = document.querySelector('submit');
     btn.addEventListener('click', function (event) {
       event.preventDefault();
@@ -189,6 +192,7 @@
     }
 
   </script>
+
 
   </body>
 </html>

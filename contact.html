@@ -157,35 +157,71 @@
 
     <script>
       const form = document.getElementById('form');
-      const btn = document.querySelector('[type="submit"]');
+      const btn = document.querySelector("submit");
       
-      btn.addEventListener('click', async function (event) {
+      btn.addEventListener('click', function (event) {
         event.preventDefault();
-    
+        sendMessage();
+      });
+      
+      async function sendMessage(){
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-    
+        
         try {
           const response = await fetch("https://trashpoint.onrender.com/contact", {
-            method: "POST",  
+            method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, message })
+            body: JSON.stringify({ name, email, message }), 
           });
-    
+          
+          const data = await response.json();
+          
           if (response.ok) {
-            window.location.href = "https://trashpoint.vercel.app/services.html";
+            // Redirect to the service page after successful signup
+            window.location.href="https://trashpoint.vercel.app/services.html";
           } else {
-            const data = await response.json(); // Assuming the server responds with JSON
+            // Display the response message on the page
             document.getElementById('response').innerText = data.message;
           }
         } catch (error) {
-          console.error(error);
+          console.error('Error sending message:', error);
         }
-      });
-    </script>
+      };
+      
+      
+      // btn.addEventListener('click', async function (event) {
+      //   event.preventDefault();
+    
+      //   const name = document.getElementById('name').value;
+      //   const email = document.getElementById('email').value;
+      //   const message = document.getElementById('message').value;
+    
+      //   try {
+      //     const response = await fetch("https://trashpoint.onrender.com/contact", {
+      //       method: "POST",  
+      //       headers: {
+      //         'Content-Type': 'application/json'
+      //       },
+      //       body: JSON.stringify({ name, email, message })
+      //     });
+    
+      //     if (response.ok) {
+      //       window.location.href = "https://trashpoint.vercel.app/services.html";
+      //     } else {
+      //       const data = await response.json(); // Assuming the server responds with JSON
+      //       document.getElementById('response').innerText = data.message;
+      //     }
+      //   } catch (error) {
+      //     console.error(error);
+      //   }
+      // });
+
+
+  </script>
     
 
 

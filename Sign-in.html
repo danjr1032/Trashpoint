@@ -76,16 +76,23 @@ btn.addEventListener('click', async function (event) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ phone, password }), 
+      body: JSON.stringify({ phone, password })
+      .then(response => {
+        if (response.redirected) {
+          window.location.href = "https://trashpoint.vercel.app/services.html";
+        } else {
+          document.getElementById('response').innerText = data.message;
+        }
+      })
     });
-
-    if (response.ok) {
-      // Redirect to the dashboard or any other page after successful login
-      window.location.href = 'https://trashpoint.vercel.app/services.html';
-    } else {
-      document.getElementById('response').innerText = data.message;
     }
-  } catch (error) {
+    // if (response.ok) {
+    //   // Redirect to the dashboard or any other page after successful login
+    //   window.location.href = 'https://trashpoint.vercel.app/services.html';
+    // } else {
+    //   document.getElementById('response').innerText = data.message;
+    // }
+  catch (error) {
     console.error('Error during login:', error);
   }
 });

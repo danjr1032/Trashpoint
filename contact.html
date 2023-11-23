@@ -158,33 +158,33 @@
       Btn.addEventListener('click', function (event) {
         event.preventDefault();
         sendMessage();
+        async function sendMessage() {
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+          try {
+            const response = await fetch('https://trashpoint.onrender.com/contact', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ name, email, message }),
+            });
+  
+            const data = await response.json();
+            if (response.ok) {
+              // Redirect to the dashboard or any other page after successful login
+              window.location.href = 'https://trashpoint.vercel.app/#';
+            } else {
+              document.getElementById('response').innerText = data.message;
+            }
+  
+          } catch (error) {
+            console.error('Error sending user:', error);
+          }
+        }
       });
 
-      async function sendMessage() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        try {
-          const response = await fetch('https://trashpoint.onrender.com/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-          });
-
-          const data = await response.json();
-          if (response.ok) {
-            // Redirect to the dashboard or any other page after successful login
-            window.location.href = 'https://trashpoint.vercel.app/#';
-          } else {
-            document.getElementById('response').innerText = data.message;
-          }
-
-        } catch (error) {
-          console.error('Error sending user:', error);
-        }
-      }
 
     </script>
   </body>

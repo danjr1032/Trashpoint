@@ -61,7 +61,7 @@
             <input type="name" id="name" placeholder="Enter your Name" required/>
             <input type="email" id="email" placeholder="Enter a valid email address" required/>
             <textarea name="Message" id="message" placeholder="Message" cols="30" rows="5" required></textarea>
-            <input type="submit" class="submit" name="submit"  value="SEND">
+            <input type="submit" id="submit" name="submit"  value="SEND">
 
   
             <p class="back"><a href="./index.html">HOME</a></p>
@@ -156,40 +156,79 @@
 
 
     <script>
-    const form = document.getElementById('#contact');
-    const btn = document.querySelector('.submit');
-    btn.addEventListener('click', function (event) {
-      event.preventDefault();
-      contact();
+
+
+const form = document.getElementById('contact'); 
+const btn = document.getElementById('submit'); 
+form.addEventListener('submit', function (event) { 
+  event.preventDefault();
+  contact();
+});
+
+async function contact() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  try {
+    const response = await fetch('https://trashpoint.onrender.com/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
     });
 
-    async function contact() {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+    const data = await response.json();
 
-      try {
-        const response = await fetch('https://trashpoint.onrender.com/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, message }), 
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          // Redirect to the service page after successful signup
-          location.href="https://trashpoint.vercel.app/index.html";
-        } else {
-          // Display the response message on the page
-          document.getElementById('response').innerText = data.message;
-        }
-      } catch (error) {
-        console.error(error);
-      }
+    if (response.ok) {
+      // Redirect to the service page after successful signup
+      window.location.href = 'https://trashpoint.vercel.app/index.html'; // Use window.location.href for redirection
+    } else {
+      // Display the response message on the page
+      document.getElementById('response').innerText = data.message;
     }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+
+    // const form = document.getElementById('#contact');
+    // const btn = document.querySelector('.submit');
+    // btn.addEventListener('click', function (event) {
+    //   event.preventDefault();
+    //   contact();
+    // });
+
+    // async function contact() {
+    //   const name = document.getElementById('name').value;
+    //   const email = document.getElementById('email').value;
+    //   const message = document.getElementById('message').value;
+
+    //   try {
+    //     const response = await fetch('https://trashpoint.onrender.com/contact', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({ name, email, message }), 
+    //     });
+
+    //     const data = await response.json();
+
+    //     if (response.ok) {
+    //       // Redirect to the service page after successful signup
+    //       location.href="https://trashpoint.vercel.app/index.html";
+    //     } else {
+    //       // Display the response message on the page
+    //       document.getElementById('response').innerText = data.message;
+    //     }
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // }
 
   </script>
 

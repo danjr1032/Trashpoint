@@ -60,7 +60,7 @@
           <form action="https://trashpoint.onrender.com/contact" id="form" method="post">
             <input type="name" id="name" placeholder="Enter your Name" required/>
             <input type="email" id="email" placeholder="Enter a valid email address" required/>
-            <textarea name="Message" id="message" placeholder="Message" cols="30" rows="5" required></textarea>
+            <textarea name="message" id="message" placeholder="message" cols="30" rows="5" required></textarea>
             <input type="submit" class="submit" value="SEND">
 
   
@@ -157,18 +157,15 @@
 
     <script>
       const form = document.getElementById('form');
-      const btn = document.querySelector(type='submit');
+      const btn = document.querySelector('[type="submit"]');
       
       btn.addEventListener('click', async function (event) {
         event.preventDefault();
-
-        // const name = form.name.value;
-        // const email = form.email.value;
-        // const message = form.message.value;
+    
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-
+    
         try {
           const response = await fetch("https://trashpoint.onrender.com/contact", {
             method: "POST",  
@@ -176,22 +173,20 @@
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ name, email, message })
-
-            .then(response => {
-              if (response.ok) {
-                window.location.href = "https://trashpoint.vercel.app/services.html";
-              } else {
-                document.getElementById('response').innerText = data.message;
-              }
-            })
           });
+    
+          if (response.ok) {
+            window.location.href = "https://trashpoint.vercel.app/services.html";
+          } else {
+            const data = await response.json(); // Assuming the server responds with JSON
+            document.getElementById('response').innerText = data.message;
           }
-        catch (error) {
+        } catch (error) {
           console.error(error);
         }
       });
-
-  </script>
+    </script>
+    
 
 
   </body>

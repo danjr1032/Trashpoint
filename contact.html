@@ -61,7 +61,7 @@
             <input type="text" id="name" placeholder="Enter your Name"/>
             <input type="email" id="email" placeholder="Enter a valid email address"/>
             <textarea name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
-            <input type="submit" class="submit" value="SEND">
+            <input type="submit" id="submit" name="submit" value="SEND">
 
   
             <p class="back"><a href="./index.html">HOME</a></p>
@@ -197,7 +197,8 @@
 
 <script>
   const form = document.getElementById('form');
-   const btn = document.querySelector('.submit');
+   const btn = document.querySelector('submit');
+
    btn.addEventListener('click', function (event) {
      event.preventDefault();
      send();

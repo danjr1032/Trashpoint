@@ -67,8 +67,13 @@ btn.addEventListener('click', async function (event) {
   const password = form.password.value;
 
   if (!phone || !password) {
-    error.textContent = "All fields are required";
-    return;  
+    alert("All fields are required");
+  }else if (phone==="" && password==="") {
+    res.send("message: All fields are required..")
+  }else if (phone==="") {
+    res.send("Please enter phone")
+  }else if (password==="") {
+    res.send("message: Please enter password")
   }
 
   try {
@@ -82,9 +87,9 @@ btn.addEventListener('click', async function (event) {
         if (response.ok) {
           window.location.href = "https://trashpoint.vercel.app/services.html";
         } 
-        // else {
-        //   document.getElementById('response').innerText = data.message;
-        // }
+        else {
+          document.getElementById('errorMessage').innerText = data.message;
+        }
       })
     });
     }

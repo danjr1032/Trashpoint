@@ -58,7 +58,6 @@
     <script>
 const form = document.querySelector('form');
 const btn = document.querySelector('#btn');  
-const error = document.querySelector('#errorMessage');  
 
 btn.addEventListener('click', async function (event) {
   event.preventDefault();
@@ -80,6 +79,7 @@ btn.addEventListener('click', async function (event) {
           window.location.href = "https://trashpoint.vercel.app/services.html";
         } 
         else {
+          const data = response.json();
           displayErrorMessage(data.message);
         }
       })

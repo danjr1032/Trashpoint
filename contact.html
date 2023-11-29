@@ -58,10 +58,10 @@
         <div class="contact">
           <h1>Contact Us</h1>
           <form action="https://trashpoint.onrender.com/contact" id="form" method="POST">
-            <input type="text" id="name" placeholder="Enter your Name"/>
-            <input type="email" id="email" placeholder="Enter a valid email address"/>
-            <textarea name="message" id="message" placeholder="message" cols="30" rows="5"></textarea>
-            <input type="submit" id="submit" name="submit" value="SEND">
+            <input type="text" name="name" placeholder="Enter your Name"/>
+            <input type="email" email="email" placeholder="Enter a valid email address"/>
+            <textarea name="message" message="message" placeholder="message" cols="30" rows="5"></textarea>
+            <input type="submit" name="submit" value="SEND">
 
   
             <p class="back"><a href="./index.html">HOME</a></p>
@@ -199,15 +199,19 @@
   const form = document.getElementById('form');
    const btn = document.querySelector('submit');
 
-   btn.addEventListener('click', function (event) {
+   btn.addEventListener('submit', function (event) {
      event.preventDefault();
      send();
    });
 
    async function send() {
-     const name = document.getElementById('name').value;
-     const email = document.getElementById('email').value;
-     const message = document.getElementById('message').value;
+  const name = form.name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+
+    //  const name = document.getElementById('name').value;
+    //  const email = document.getElementById('email').value;
+    //  const message = document.getElementById('message').value;
 
      try {
        const response = await fetch('https://trashpoint.onrender.com/contact', {

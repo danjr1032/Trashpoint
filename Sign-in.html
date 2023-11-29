@@ -41,7 +41,7 @@
           <p><a href="#">Forgot password?</a></p>
 
           <div class="sign-up">
-            <input type="submit" name="btn"  value="Sign-in">
+            <input type="submit" name="submit"  value="Sign-in">
           </div>
           <div id="errorMessage"></div>
         <p>Don't have an account?<a href="./Sign-up.html"> Sign-up</a></p>
@@ -57,9 +57,9 @@
 
     <script>
 const form = document.querySelector('form');
-// const btn = document.querySelector('#btn');  
+const btn = document.querySelector('#btn');  
 
-form.addEventListener('submit', async function (event) {
+btn.addEventListener('submit', async function (event) {
   event.preventDefault();
 
   const phone = form.phone.value;

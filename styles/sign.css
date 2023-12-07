@@ -23,7 +23,7 @@ body {
   background-repeat: no-repeat;
   padding: 3rem;
   font-family: "Catamaran", sans-serif;
-}
+  }
 .container {
   min-width: 500px;
   align-items: center;
@@ -139,7 +139,7 @@ p {
 p a {
   text-decoration: none;
   color: #a5bcf0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* extra syle for sign-in */

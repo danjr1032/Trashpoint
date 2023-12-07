@@ -90,10 +90,8 @@
           const data = await response.json();
 
           if (response.ok) {
-            // Redirect to the service page after successful signup
-            location.href="https://trashpoint.vercel.app/services.html";
+            window.location.href = "https://trashpoint.vercel.app/dashboard.html";
           } else {
-            // Display the response message on the page
             document.getElementById('response').innerText = data.message;
           }
         } catch (error) {

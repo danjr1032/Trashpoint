@@ -57,7 +57,7 @@
   
         <div class="contact">
           <h1>Contact Us</h1>
-          <form action="https://trashpoint.onrender.com/contact" id="form" method="POST">
+          <form action="https://trash-point.onrender.com/contact" id="form" method="POST">
             <input type="text" name="name" placeholder="Enter your Name" required/>
             <input type="email" email="email" placeholder="Enter a valid email address" required/>
             <textarea name="message" message="message" placeholder="message" cols="30" rows="5" required></textarea>
@@ -214,7 +214,7 @@
     //  const message = document.getElementById('message').value;
 
      try {
-       const response = await fetch('https://trashpoint.onrender.com/contact', {
+       const response = await fetch('https://trash-point.onrender.com/contact', {
          method: 'POST',
          headers: {'Content-Type': 'application/json'},
          body: JSON.stringify({ name, email, message }), 

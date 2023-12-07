@@ -20,7 +20,7 @@
         <img src="./images/trashsign-uplogo.svg" alt="" width="120" height="120">
       <h2>SIGN-IN</h2>
       </div>
-     <form action="https://trash-point.onrender.com/user/login" method="post" onsubmit="login(event)">
+     <form action="https://trash-point.onrender.com/user/login" method="post">
         <main class="main">
           <div class="user-input-box">
             <input
@@ -59,7 +59,8 @@
     </div>
 
     <script>
-async function login(event) {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', async function (event){
             event.preventDefault();
 
             const phone = document.getElementById('phone').value;
@@ -93,7 +94,7 @@ async function login(event) {
     console.log('Error during login:', error);
     displayErrorMessage('Error during login. Please try again.');
   }
-};
+});
 
 function displayErrorMessage(message) {
   document.getElementById('errorMessage').innerText = message;

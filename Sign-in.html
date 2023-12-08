@@ -20,7 +20,7 @@
         <img src="./images/trashsign-uplogo.svg" alt="" width="120" height="120">
       <h2>SIGN-IN</h2>
       </div>
-     <form action="https://trash-point.onrender.com/user/login" method="post">
+     <form action="https://trash-point.onrender.com/user/login" id="signin" method="post">
         <main class="main">
           <div class="user-input-box">
             <input
@@ -40,10 +40,9 @@
               required
             />
           </div>
-          <div id="errorMessage"></div>
-
           <p><a href="forgotpassword.html">Forgot password?</a></p>
-
+          <div id="errorMessage"></div>
+          
           <div class="sign-up">
             <input type="submit" name="submit"  value="Sign-in">
           </div>
@@ -59,12 +58,14 @@
     </div>
 
     <script>
-      const form = document.querySelector('form');
-      form.addEventListener('submit', async function (event){
-            event.preventDefault();
+const form = document.querySelector('form');
+const btn = document.querySelector('#btn');  
 
-            const phone = document.getElementById('phone').value;
-            const password = document.getElementById('password').value;
+btn.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const phone = form.phone.value;
+  const password = form.password.value;
 
 
   try {
@@ -74,29 +75,29 @@
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ phone, password })
-    });
+      
+      .then(response => {
+        const data = response.json();
+        console.log(data);
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-
-    console.log(data);
-
-    if (data.success) {
-      window.location.href = 'https://trashpoint.vercel.app/dashboard.html';
-    } else {
-      console.error('Login failed:', data.message);
-      displayErrorMessage(data.message);
-    }
-  } catch (error) {
-    console.log('Error during login:', error);
-    displayErrorMessage('Error during login. Please try again.');
+        if (data.success) {
+          window.location.href = 'https://trashpoint.vercel.app/dashboard.html';
+        } else {
+          console.error('Login failed:', data.message);
+          displayErrorMessage(data.message);
+      }
+    })
+    })
   }
-});
-function displayErrorMessage(message) {
+  catch (error) {
+    console.error('Error during login:', error);
+    displayErrorMessage(data.message);
+
+  }
+  function displayErrorMessage(message) {
   document.getElementById('errorMessage').innerText = message;
 }
+});
 
     </script>
   </body>

@@ -21,7 +21,7 @@
         <img src="./images/trashsign-uplogo.svg" alt="" width="120" height="120">
       <h2>SIGN-UP</h2>
       </div>
-      <form action="https://trash-point.onrender.com/user/signup" id="signup" method="POST">
+      <form action="localhost:7000/user/signup" id="signup" method="POST">
         <main class="main">
           <div class="user-input-box">
             <input
@@ -79,7 +79,7 @@
         const password = document.getElementById('password').value;
 
         try {
-          const response = await fetch('https://trash-point.onrender.com/user/signup', {
+          const response = await fetch('http://localhost:7000/user/signup', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

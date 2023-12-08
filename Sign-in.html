@@ -44,7 +44,7 @@
           <div id="errorMessage"></div>
           
           <div class="sign-up">
-            <input type="submit" name="submit"  value="Sign-in">
+            <input type="submit" name="submit" class="btn" value="Sign-in">
           </div>
         <p>Don't have an account?<a href="./Sign-up.html"> Sign-up</a></p>
         <p>OR</p>
@@ -59,35 +59,30 @@
 
     <script>
 const form = document.querySelector('form');
-const btn = document.querySelector('#btn');  
+const btn = document.querySelector('.btn');  
 
-btn.addEventListener('submit', async function (event) {
+btn.addEventListener('click', async function (event) {
   event.preventDefault();
 
   const phone = form.phone.value;
   const password = form.password.value;
 
-
+// 
+//
   try {
     const response = await fetch("https://trash-point.onrender.com/user/login", {
       method: "POST",  
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone, password })
-      
-      .then(response => {
-        const data = response.json();
-        console.log(data);
-
+    });
+    const data = await response.json();
+    console.log(data);
         if (data.success) {
-          window.location.href = 'https://trashpoint.vercel.app/dashboard.html';
+          window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
         } else {
           console.error('Login failed:', data.message);
           displayErrorMessage(data.message);
       }
-    })
-    })
   }
   catch (error) {
     console.error('Error during login:', error);

@@ -57,7 +57,7 @@
   
         <div class="contact">
           <h1>Contact Us</h1>
-          <form action="https://trash-point.onrender.com/contact/send" id="form" method="POST">
+          <form action="https://trash-point.onrender.com/contact/send" method="POST">
             <input type="text" name="name" placeholder="Enter your Name" required/>
             <input type="email" email="email" placeholder="Enter a valid email address" required/>
             <textarea name="message" message="message" placeholder="message" cols="30" rows="5" required></textarea>
@@ -153,88 +153,32 @@
       </div>
     </footer>
 
-
-
-    <!-- <script>
-      const form = document.getElementById('form');
-      const btn = document.querySelector("submit");
-      
-      btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        sendMessage();
-      });
-      
-      async function sendMessage(){
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        try {
-          const response = await fetch("https://trashpoint.onrender.com/contact", {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }), 
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault(); 
+  
+          const formData = new FormData(this);
+  
+          fetch("https://trash-point.onrender.com/contact/send", {
+              method: "POST",
+              body: formData
+          })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error("Network response was not ok");
+              }
+              return response.json(); 
+          })
+          .then(data => {
+              console.log("Success:", data);
+              alert("Message sent successfully!");
+          })
+          .catch(error => {
+              console.error("Error:", error);
+              alert("An error occurred. Please try again later.");
           });
-          
-          const data = await response.json();
-          
-          if (response.ok) {
-            // Redirect to the service page after successful signup
-            window.location.href="https://trashpoint.vercel.app/services.html";
-          } else {
-            // Display the response message on the page
-            document.getElementById('response').innerText = data.message;
-          }
-        } catch (error) {
-          console.error('Error sending message:', error);
-        }
-      };
-      
-  </script> -->
-
-
-<script>
-  const form = document.getElementById('form');
-   const btn = document.querySelector('submit');
-
-   btn.addEventListener('submit', function (event) {
-     event.preventDefault();
-     send();
-   });
-
-   async function send() {
-  const name = form.name.value;
-  const email = form.email.value;
-  const message = form.message.value;
-
-    //  const name = document.getElementById('name').value;
-    //  const email = document.getElementById('email').value;
-    //  const message = document.getElementById('message').value;
-
-     try {
-       const response = await fetch('https://trash-point.onrender.com/contact/send', {
-         method: 'POST',
-         headers: {'Content-Type': 'application/json'},
-         body: JSON.stringify({ name, email, message }), 
-       });
-
-       const data = await response.json();
-
-       if (response.ok) {
-         window.location.href="https://trashpoint.vercel.app/services.html";
-       } else {
-         // Display the response message on the page
-         document.getElementById('response').innerText = data.message;
-       }
-     } catch (error) {
-       console.error('Error sending message:', error);
-     }
-   }
-
- </script>    
-
+      });
+  </script>
 
   </body>
 </html>

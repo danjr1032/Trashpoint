@@ -57,10 +57,10 @@
       </form>
     </div>
 
-    
+
 <script>
 
-     document.addEventListener('DOMContentLoaded', function () {
+    //  document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form');
     const btn = document.querySelector('.btn');
     form.addEventListener('submit', async function (event) {
@@ -95,7 +95,7 @@
 
             if (data.success) {
                 localStorage.setItem('userId', data.userId);
-                localStorage.setItem('fullname', data.name);
+                localStorage.setItem('fullName', data.name);
                 localStorage.setItem('phone', data.phone);
 
                 window.location.href = 'dashboardd.html';
@@ -104,7 +104,7 @@
             console.error('Error signing in:', error);
         }
     }
-  });
+  // });
 </script>
 
 

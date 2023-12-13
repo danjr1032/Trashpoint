@@ -1,11 +1,11 @@
- //DIS PLAY NAME FUNCTION//
 
- 
- const fullname = localStorage.getItem('fullname');
+
+
+ const fullName = localStorage.getItem('fullName');
     const phone = localStorage.getItem('phone');
 
     const Name = document.querySelector('.fname');
     const Phone = document.querySelector('.phoneNumber');
 
-    Name.textContent = `Welcome ${fullname}`;
+    Name.textContent = `Welcome ${fullName}`;
     Phone.textContent = `Phone: ${phone}`;

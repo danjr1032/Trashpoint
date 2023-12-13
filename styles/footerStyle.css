@@ -124,6 +124,16 @@ a {
   line-height: 2rem;
 }
 
+.get-in-touch a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.get-in-touch a:hover {
+  color: var(--special-color);
+}
+
+
 .git-img {
   font-size: 20px;
 }
@@ -141,10 +151,6 @@ a {
   color:var(--bg-footer);
 
 } */
-
-.get-in-touch a:hover {
-  color: var(--special-color);
-}
 
 .span {
   font-size: 20px;

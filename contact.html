@@ -24,52 +24,86 @@
   <body>
     <header>
       <div id="main-div">
-          <div class="grid">
-            <div class="grid-item">
-              <a href="https://maps.app.goo.gl/cVdSHZEuPrSC1zdX8 address"><i class="fa-solid fa-location-dot"></i></a>
-              <h4>MAIN OFFICE</h4>
-              <p>Behind Fwavei Police Station, Rayfield.</p>
-            </div>
-            
-            <div class="grid-item mail">
-              <a href="mailto:angyusarah1@gmail.com"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
-              <h4>EMAIL</h4>
-              <p>trashpoint@gmail.com</p>
-            </div>
-  
-            <div class="grid-item phone">
-              <a href="tel:+234 913 223 4570"
-                ><i class="fa-solid fa-phone"></i
-              ></a>
-              <h4>PHONE NUMBER</h4>
-              <p>+234-700-012-0011</p>
-            </div>
-  
-            <div class="icons grid-item grid-socials">
-              <a href="https://www.facebook.com/sarah.smilet?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.twitter.com/angyu_sarah"><i class="fa-brands fa-twitter"></i></a>
-              <a href="http://linkedin.com/in/sarahangyu"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://instagram.com/girl_smileeyyy?igshid=MmIzYWVlNDQ5Yg=="><i class="fa-brands fa-instagram"></i></a>
-            </div>
+        <div class="grid">
+          <div class="grid-item">
+            <a href="https://maps.app.goo.gl/cVdSHZEuPrSC1zdX8 address"
+              ><i class="fa-solid fa-location-dot"></i
+            ></a>
+            <h4>MAIN OFFICE</h4>
+            <p>Behind Fwavei Police Station, Rayfield.</p>
           </div>
-  
+
+          <div class="grid-item mail">
+            <a href="mailto:angyusarah1@gmail.com"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <h4>EMAIL</h4>
+            <p>trashpoint@gmail.com</p>
+          </div>
+
+          <div class="grid-item phone">
+            <a href="tel:+234 913 223 4570"
+              ><i class="fa-solid fa-phone"></i
+            ></a>
+            <h4>PHONE NUMBER</h4>
+            <p>+234-700-012-0011</p>
+          </div>
+
+          <div class="icons grid-item grid-socials">
+            <a href="https://www.facebook.com/sarah.smilet?mibextid=LQQJ4d"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.twitter.com/angyu_sarah"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="http://linkedin.com/in/sarahangyu"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://instagram.com/girl_smileeyyy?igshid=MmIzYWVlNDQ5Yg=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
         <div class="contact">
           <h1>Contact Us</h1>
-          <form action="https://trash-point.onrender.com/contact/send" method="POST">
-            <input type="text" name="name" placeholder="Enter your Name" required/>
-            <input type="email" email="email" placeholder="Enter a valid email address" required/>
-            <textarea name="message" message="message" placeholder="message" cols="30" rows="5" required></textarea>
-            <input type="submit" name="submit" value="SEND">
+          <form
+            action="https://trash-point.onrender.com/contact/send"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your Name"
+              required
+              id="email-name"
+            />
+            <input
+              type="email"
+              email="email"
+              placeholder="Enter a valid email address"
+              required
+              id="email-address"
+            />
+            <textarea
+              name="message"
+              message="message"
+              placeholder="message"
+              cols="30"
+              rows="5"
+              required
+              id="email-message"
+            ></textarea>
+            <div id="errorMessage"></div>
+            <!-- <input type="submit" class="send" name="submit" id="sub" value="SEND" /> -->
+            <button id="sub" class="send" name="submit">Send</button>
 
-  
             <p class="back"><a href="./index.html">HOME</a></p>
           </form>
         </div>
       </div>
     </header>
-    
 
     <footer>
       <div class="footer">
@@ -83,7 +117,7 @@
         </div>
         <div class="links footer-grid-item">
           <h4>Links</h4>
-          <ul>
+          <ul class="linkkks">
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./services.html">Services</a></li>
             <li><a href="">Request Pickup</a></li>
@@ -148,39 +182,60 @@
 
         <div class="attribution">
           Copyright <span class="span">&#169;</span>
-          <a href="#">Trash Point</a>All Rights Reserved
+          <a href="index.html">Trash Point</a>All Rights Reserved
         </div>
       </div>
     </footer>
 
-    
-
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-          event.preventDefault(); 
-  
-          const formData = new FormData(this);
-  
-          fetch("https://trash-point.onrender.com/contact/send", {
-              method: "POST",
-              body: formData
-          })
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error("Network response was not ok");
-              }
-              return response.json(); 
-          })
-          .then(data => {
-              console.log("Success:", data);
-              alert("Message sent successfully!");
-          })
-          .catch(error => {
-              console.error("Error:", error);
-              alert("An error occurred. Please try again later.");
-          });
-      });
-  </script>
+      const form = document.querySelector("form");
+      const btn = document.querySelector(".send");
+      const btnn = document.getElementById('sub')
 
+      const emailName = document.getElementById('email-name')
+      const emailAddress = document.getElementById('email-address')
+      const emailMessage = document.getElementById('email-message')
+
+      btnn.addEventListener("click", async function (event) {
+        event.preventDefault();
+        console.log(emailName.value, emailAddress.value, emailMessage.value)
+
+        // const name = form.name.value;
+        // const email = form.email.value;
+        // const message = form.message.value;
+
+        const payload = {
+          name: emailName.value,
+          email: emailAddress.value,
+          message: emailMessage.value 
+        }
+
+        try {
+          const response = await fetch("https://trash-point.onrender.com/contact/send",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            }
+          );
+          const data = await response.json();
+          console.log(data);
+
+          if (data.success) {
+            console.log(data);
+            window.location.href = "http://127.0.0.1:5501/contact.html";
+          } else {
+            console.log("Message send failed:", data.message);
+            displayErrorMessage(data.message);
+          }
+        } catch (error) {
+          console.log("An error occured:", error);
+          displayErrorMessage(data.message);
+        }
+        function displayErrorMessage(message) {
+          document.getElementById("errorMessage").innerText = message;
+        }
+      });
+    </script>
   </body>
 </html>

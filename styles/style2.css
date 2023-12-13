@@ -332,7 +332,7 @@ a {
 }
 
 .w-hours p:nth-last-child(2) {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 /* git */
@@ -342,15 +342,25 @@ a {
   padding-right: 1rem;
 }
 
+.linkkks li {
+  line-height: 2rem;
+}
+
 .get-in-touch {
   justify-content: left;
   align-items: center;
   gap: 1rem;
 }
 
+.get-in-touch a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .get-in-touch a:hover {
   color: var(--special-color);
 }
+
 
 .get-in-touch ul li {
   font-size: 20px;

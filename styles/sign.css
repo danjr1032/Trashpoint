@@ -101,7 +101,8 @@ p {
 
 .google {
   padding: 0.5rem;
-  background-color: white;
+  background-color: black;
+  color: white;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -112,7 +113,7 @@ p {
 }
 
 .google a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 

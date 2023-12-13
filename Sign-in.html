@@ -20,7 +20,7 @@
         <img src="./images/trashsign-uplogo.svg" alt="" width="120" height="120">
       <h2>SIGN-IN</h2>
       </div>
-     <form action="https://trash-point.onrender.com/user/login" id="loginForm" method="post">
+     <form action="https://trash-point.onrender.com/user/login"  method="post">
         <main class="main">
           <div class="user-input-box">
             <input
@@ -57,7 +57,7 @@
       </form>
     </div>
 
-    <script>
+    <!-- <script>
       const form = document.getElementById('form');
        const btn = document.querySelector('.btn');
        btn.addEventListener('submit', function (event) {
@@ -90,6 +90,56 @@
          }
        }
  
-     </script>
+     </script> -->
+
+<script>
+
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const phone = document.getElementById('phone').value;
+  const password = document.getElementById('password').value;
+
+  if (phone === '' || password === '') {
+    alert('Please enter your phone and password !')
+  }
+  // console.log(email);
+  // console.log(password);
+  const URL = 'https://trash-point.onrender.com/user/login'
+  fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      phone: phone,
+      password: password,
+    }),
+  })
+    .then(response => {
+      if (!response.ok) {
+        alert('Incorrect phone or password. Please try again.');
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.success) {
+        localStorage.setItem('userId', data.userId);
+        localStorage.setItem('fullname', data.name);
+        localStorage.setItem('phone', data.phone);
+
+        window.location.href = 'dashboardd.html';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+
+})
+</script>
   </body>
 </html>

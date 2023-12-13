@@ -1,4 +1,6 @@
  //DIS PLAY NAME FUNCTION//
+
+ 
  const fullname = localStorage.getItem('fullname');
     const phone = localStorage.getItem('phone');
 

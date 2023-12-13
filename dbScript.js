@@ -9,4 +9,3 @@
 
  Name.textContent =`Welcome ${fullname}`;
  Phone.textContent = phone;
- //END OF DISPLAY NAME FUCTION//

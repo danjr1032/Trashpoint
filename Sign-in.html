@@ -44,6 +44,7 @@
           <div id="errorMessage" style="color: red; text-align: center; margin-left: 4rem;"></div>
           
           <div class="sign-up">
+            <!-- <button type="submit" name="submit">Sign-In</button> -->
             <input type="submit" name="submit" class="btn" value="Sign-in">
           </div>
         <p>Don't have an account?<a href="./Sign-up.html"> Sign-up</a></p>
@@ -86,11 +87,11 @@ btn.addEventListener('click', async function (event) {
     const data = await response.json();
     // console.log(data);
         if (data.success) {
-          console.log(data);
+          // console.log(data);
           setCookie('uid', data.user.userId, 60)
           setCookie('name', data.user.fullName, 60)
           setCookie('phone', data.user.phone, 60)
-          window.location.href = 'http://127.0.0.1:5501/dashboardd.html';
+          window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
         } else {
           console.error('Login failed:', data.message);
           displayErrorMessage(data.message);

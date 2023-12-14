@@ -159,7 +159,9 @@
               placeholder="e.g Year-month-day" />
             </div>
             <div class="user-input-box">
-              <input type="time" />
+              <input type="time" 
+              id="time"
+              />
             </div>
             <button type="submit" id="request">Request</button>
           </form>
@@ -508,30 +510,32 @@
         function displayErrorMessage(message) {
           document.getElementById("errorMessage").innerText = message;
         }
-      });
+      })
     </script>
 
-<!-- <script>
-  const form = document.querySelector("form");
+<script>
+  const formData = document.querySelector("form");
   const btnn = document.getElementById('request')
 
-  const emailName = document.getElementById('requestType')
-  const emailAddress = document.getElementById('location')
-  const emailMessage = document.getElementById('date')
-  const emailMessage = document.getElementById('time')
+  const RequestType = document.getElementById('requestType')
+  const Location = document.getElementById('location')
+  const Date = document.getElementById('date')
+  const Time = document.getElementById('time')
 
   btnn.addEventListener("click", async function (event) {
     event.preventDefault();
-    console.log(emailName.value, emailAddress.value, emailMessage.value)
+    console.log(RequestType.value, Location.value, Date.value, Time.value)
 
     const payload = {
-      name: emailName.value,
-      email: emailAddress.value,
-      message: emailMessage.value 
+      RequestType: RequestType.value,
+      Location: Location.value,
+      Date: Date.value,
+      Time: Time.value 
     }
 
     try {
-      const response = await fetch("https://trash-point.onrender.com/contact/send",
+      const uidCookie = getCookie("uid");
+      const response = await fetch(`https://trash-point.onrender.com/request/send/${uidCookie}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -542,10 +546,10 @@
       console.log(data);
 
       if (data.success) {
+        window.location.href = "https://trashpoint.vercel.app/dashboardd.html";
         console.log(data);
-        window.location.href = "http://127.0.0.1:5501/contact.html";
       } else {
-        console.log("Message send failed:", data.message);
+        // console.log("Message send failed:", data.message);
         displayErrorMessage(data.message);
       }
     } catch (error) {
@@ -556,6 +560,6 @@
       document.getElementById("errorMessage").innerText = message;
     }
   });
-</script> -->
+</script>
   </body>
 </html>

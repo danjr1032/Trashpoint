@@ -1,139 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Caveat&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/d4487fbc02.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="Script1.js" defer></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/style.css" />
-    <script src="./dbScript.js"></script>
-  </head>
-  <body class="container">
-    <header class="header">
-      <nav class="nav">
-        <a href="index.html"><img src="/images/logo.svg" alt="logo" /></a>
-        <h1 class="dashbordh1" id="welcome">Dashboard</h1>
-      </nav>
-    </header>
 
-    <main class="main">
-      <section class="aside">
-        <h2 id="myText">Good Morning</h2>
-        <div class="user-profile">
-          <i class="fa-solid fa-user"></i>
-          <h3 id="active-user">Tapji Blessing</h3>
-          <p id="phone">+2349076217699</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Caveat&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <script src="https://kit.fontawesome.com/d4487fbc02.js" crossorigin="anonymous"></script>
+  <script src="Script1.js" defer></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="./dbScript.js"></script>
+</head>
 
-        <div class="link">
-          <ul class="side-bar">
-            <li class="list">
-              <div><i class="fa-solid fa-chart-simple"></i></div>
-              <div>
-                <a
-                  class="menu-items dashboard"
-                  id="active-class"
-                  href="dashboardd.html"
-                  >Dashboard</a
-                >
-              </div>
-            </li>
-            <li class="list">
-              <div><i class="fa-solid fa-address-card"></i></div>
-              <div>
-                <a class="menu-items profile" href="#">Profile</a>
-              </div>
-            </li>
-            <li class="list">
-              <div><i class="fa-solid fa-truck"></i></div>
-              <div>
-                <a class="menu-items request" href="#">Request Pickup</a>
-              </div>
-            </li>
-            <li class="list">
-              <div><i class="fa-solid fa-eye"></i></div>
-              <div><a class="menu-items view" href="#">View Request</a></div>
-            </li>
-            <li class="list">
-              <div><i class="fa-solid fa-bell"></i></div>
-              <div>
-                <a class="menu-items notification" href="#">Notification</a>
-              </div>
-            </li>
-            <li class="list">
-              <div><i class="fa-solid fa-location-dot"></i></div>
-              <div><a class="menu-items location" href="#">Map</a></div>
-            </li>
-            <li class="list">
-              <div><i class="fa-regular fa-credit-card"></i></div>
-              <div><a class="menu-items payment" href="#">Payment</a></div>
-            </li>
+<body class="container">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html"><img src="/images/logo.svg" alt="logo" /></a>
+      <h1 class="dashbordh1" id="welcome">Dashboard</h1>
+    </nav>
+  </header>
 
-            <div class="list logout">
-              <div><i class="fa-solid fa-right-from-bracket"></i></div>
-              <div><a href="index.html">Logout</a></div>
+  <main class="main">
+    <section class="aside">
+      <h2 id="myText">Good Morning</h2>
+      <div class="user-profile">
+        <i class="fa-solid fa-user"></i>
+        <h3 id="active-user">Tapji Blessing</h3>
+        <p id="phone">+2349076217699</p>
+      </div>
+
+      <div class="link">
+        <ul class="side-bar">
+          <li class="list">
+            <div><i class="fa-solid fa-chart-simple"></i></div>
+            <div>
+              <a class="menu-items dashboard" id="active-class" href="dashboardd.html">Dashboard</a>
             </div>
-          </ul>
-        </div>
+          </li>
+          <li class="list">
+            <div><i class="fa-solid fa-address-card"></i></div>
+            <div>
+              <a class="menu-items profile" href="#">Profile</a>
+            </div>
+          </li>
+          <li class="list">
+            <div><i class="fa-solid fa-truck"></i></div>
+            <div>
+              <a class="menu-items request" href="#">Request Pickup</a>
+            </div>
+          </li>
+          <li class="list">
+            <div><i class="fa-solid fa-eye"></i></div>
+            <div><a class="menu-items view" href="#">View Request</a></div>
+          </li>
+          <li class="list">
+            <div><i class="fa-regular fa-credit-card"></i></div>
+            <div><a class="menu-items payment" href="#">Payment</a></div>
+          </li>
+
+          <div class="list logout">
+            <div><i class="fa-solid fa-right-from-bracket"></i></div>
+            <div><a href="index.html">Logout</a></div>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <section class="user-profile-update">
+        <form action="https://trash-point.onrender.com/user/update/:userId" method="PUT">
+          <div class="profile-input-box">
+            <label for="">fullname</label>
+            <input type="" id="name" name="fullName" required />
+          </div>
+
+          <div class="profile-input-box">
+            <label for="">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="profile-input-box">
+            <label for="">State</label>
+            <input type="text" id="" name="state" required />
+          </div>
+
+          <div class="profile-input-box">
+            <label for=""> country</label>
+            <input type="text" id="country" name="country" required />
+          </div>
+
+          <div class="profile-input-box">
+            <label for="">Phone</label>
+            <input type="tel" id="number" name="number" required />
+          </div>
+
+          <div class="profile-input-box">
+            <label for="">Address</label>
+            <input type="" id="address" name="address" required />
+          </div>
+          <div id="errorMessage"></div>
+          <button type="submit" class="save-profile">Save</button>
+        </form>
       </section>
-
-      <section class="section">
-        <section class="user-profile-update">
-          <form
-            action="https://trash-point.onrender.com/user/update/:userId"
-            method="PUT"
-          >
-            <div class="profile-input-box">
-              <label for="">fullname</label>
-              <input type="" id="name" name="fullName" required />
-            </div>
-
-            <div class="profile-input-box">
-              <label for="">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="profile-input-box">
-              <label for="">State</label>
-              <input type="text" id="" name="state" required />
-            </div>
-
-            <div class="profile-input-box">
-              <label for=""> country</label>
-              <input type="text" id="country" name="country" required />
-            </div>
-
-            <div class="profile-input-box">
-              <label for="">Phone</label>
-              <input type="tel" id="number" name="number" required />
-            </div>
-
-            <div class="profile-input-box">
-              <label for="">Address</label>
-              <input type="" id="address" name="address" required />
-            </div>
-            <div id="errorMessage"></div>
-            <button type="submit" class="save-profile">Save</button>
-          </form>
-        </section>
-        <form action="https://trash-point.onrender.com/request/send/:userId" method="post">
+      <form action="https://trash-point.onrender.com/request/send/:userId" method="post">
         <section class="first-section">
           <section class="pick-up">
             <div class="user-input-box">
@@ -146,375 +121,312 @@
             </div>
 
             <div class="user-input-box">
-              <input
-                type="text"
-                id="location"
-                name="location"
-                placeholder="location"
-              />
+              <input type="text" id="location" name="location" placeholder="location" />
             </div>
 
             <div class="user-input-box">
-              <input type="text"
-              id="date"
-              placeholder="e.g Year-month-day" />
+              <input type="text" id="date" placeholder="e.g Year-month-day" />
             </div>
             <div class="user-input-box">
-              <input type="time" 
-              id="time"
-              />
+              <input type="time" id="time" />
             </div>
             <div id="errorMessage"></div>
-            <button type="submit" id="request" >Request</button>
-          </form>
-          </section>
-        </section>
+            <button type="submit" id="request">Request</button>
+      </form>
+    </section>
+    </section>
 
-        <section class="second-section">
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Pickup
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-13 Off Murna Street
-                Jos,Plateau State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 18th September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 4:30 PM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p"><span class="bold">Request Type :</span> Rentals</p>
-              <p class="p">
-                <span class="bold">Location :</span> No-28 New Abuja Jos,Plateau
-                State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 1st September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 2:40 PM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Pickup
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-123 Atiku Street
-                Jos,Plateau State
-              </p>
-              <p class="p"><span class="bold">Date :</span> 28th June 2023</p>
-              <p class="p"><span class="bold">Time :</span> 10:00 AM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Recycling
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-52 Zarmaganda Road
-                Jos,Plateau State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 12th September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Recycling
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-52 Zarmaganda Road
-                Jos,Plateau State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 12th September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Recycling
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-52 Zarmaganda Road
-                Jos,Plateau State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 12th September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
-            </div>
-          </div>
-          <div class="box">
-            <i class="uil uil-edit it"></i>
-            <div class="inner-box">
-              <p class="p">
-                <span class="bold">Request Type :</span> Trash Recycling
-              </p>
-              <p class="p">
-                <span class="bold">Location :</span> No-52 Zarmaganda Road
-                Jos,Plateau State
-              </p>
-              <p class="p">
-                <span class="bold">Date :</span> 12th September 2023
-              </p>
-              <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
-            </div>
-          </div>
-        </section>
+    <section class="second-section">
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Pickup
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-13 Off Murna Street
+            Jos,Plateau State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 18th September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 4:30 PM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p"><span class="bold">Request Type :</span> Rentals</p>
+          <p class="p">
+            <span class="bold">Location :</span> No-28 New Abuja Jos,Plateau
+            State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 1st September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 2:40 PM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Pickup
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-123 Atiku Street
+            Jos,Plateau State
+          </p>
+          <p class="p"><span class="bold">Date :</span> 28th June 2023</p>
+          <p class="p"><span class="bold">Time :</span> 10:00 AM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Recycling
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-52 Zarmaganda Road
+            Jos,Plateau State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 12th September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Recycling
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-52 Zarmaganda Road
+            Jos,Plateau State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 12th September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Recycling
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-52 Zarmaganda Road
+            Jos,Plateau State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 12th September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
+        </div>
+      </div>
+      <div class="box">
+        <i class="uil uil-edit it"></i>
+        <div class="inner-box">
+          <p class="p">
+            <span class="bold">Request Type :</span> Trash Recycling
+          </p>
+          <p class="p">
+            <span class="bold">Location :</span> No-52 Zarmaganda Road
+            Jos,Plateau State
+          </p>
+          <p class="p">
+            <span class="bold">Date :</span> 12th September 2023
+          </p>
+          <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
+        </div>
+      </div>
+    </section>
 
-        <section class="section3">
-          <section class="stats">
-            <div class="stat-card">
-              <i
-                id="fg"
-                class="fa-solid fa-trash-can"
-                style="color: #093e1a"
-              ></i>
-              <h3 class="statsh3">Total Waste Pickup</h3>
-              <p class="num-dash">134</p>
-            </div>
-            <div class="stat-card">
-              <i
-                id="fg"
-                class="fa-solid fa-truck-ramp-box"
-                style="color: #093e1a"
-              ></i>
-              <h3 class="statsh3">Total Rentals</h3>
-              <p class="num-dash">38</p>
-            </div>
-            <div class="stat-card">
-              <i
-                id="fg"
-                class="fa-solid fa-money-bill-trend-up"
-                style="color: #093e1a"
-              ></i>
-              <h3 class="statsh3">Total Amount Spent</h3>
-              <p class="num-dash">₦1,234,500</p>
-            </div>
-            <div class="stat-card">
-              <i id="fg" class="fa-solid fa-recycle" style="color: #093e1a"></i>
-              <h3 class="statsh3">Total Waste Recycle</h3>
-              <p class="num-dash">239</p>
-            </div>
-          </section>
-          <div id="chartContainer">
-            <canvas id="myChart"></canvas>
-          </div>
-          <div>
-            <h3 class="transactionh3">Transaction History</h3>
-            <div class="transaction">
-              <div class="history">
-                <p>Pickup</p>
-                <p>18-1-2023</p>
-                <p>₦5,000</p>
-              </div>
-              <div class="history">
-                <p>Pickup</p>
-                <p>22-1-2023</p>
-                <p>₦7,000</p>
-              </div>
-              <div class="history">
-                <p>Rentals</p>
-                <p>28-1-2023</p>
-                <p>₦3,000</p>
-              </div>
-              <div class="history">
-                <p>Recycle</p>
-                <p>31-1-2023</p>
-                <p>₦2,000</p>
-              </div>
-              <div class="history">
-                <p>Pickup</p>
-                <p>4-2-2023</p>
-                <p>₦5.000</p>
-              </div>
-              <div class="history">
-                <p>Pickup</p>
-                <p>15-2-2023</p>
-                <p>₦9,000</p>
-              </div>
-              <div class="history">
-                <p>Pickup</p>
-                <p>22-2-2023</p>
-                <p>₦11,000</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <section class="section3">
+      <section class="stats">
+        <div class="stat-card">
+         <p>🎉🎉 Congratulations your total waste pickup for the year is <i id="requestCount"></i></p>
+        </div>
+        <!-- <div class="stat-card">
+         <p> Total requests <i>0</i></p>
+        </div> -->
+        <!-- <div class="stat-card">
+          <i id="fg" class="fa-solid fa-money-bill-trend-up" style="color: #093e1a"></i>
+          <h3 class="statsh3">Total Amount Spent</h3>
+          <p class="num-dash">₦1,234,500</p>
+        </div>
+        <div class="stat-card">
+          <i id="fg" class="fa-solid fa-recycle" style="color: #093e1a"></i>
+          <h3 class="statsh3">Total Waste Recycle</h3>
+          <p class="num-dash">239</p>
+        </div> -->
       </section>
-
-      <section class="section4">
-        <img class="paystack" src="/images/paystack.png" alt="" />
-        <a class="pay-paystack" href="https://paystack.com/pay/381zr79ynz"
-          >Pay with Paystack</a
-        >
-      </section>
-    </main>
-    <script>
-      const ctx = document.getElementById("myChart");
-      const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const data = {
-        labels: months,
-        datasets: [
-          {
-            label: "TRASH DISPOSED IN 2023",
-            data: [11, 78, 41, 20, 60, 12, 21, 31, 16, 81, 26, 31],
-            backgroundColor: ["rgba(9,62,26,1)"],
-            borderColor: ["rgba(9,62,26,1)"],
-            borderWidth: 1,
-          },
-        ],
-      };
-
-      const chart = new Chart(ctx, {
-        type: "bar",
-        data: data,
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            display: true,
-            position: "bottom",
-          },
-          scales: {
-            xAxes: [
-              {
-                stacked: true,
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-            yAxes: [
-              {
-                stacked: true,
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
-        },
-      });
-    </script>
-
-    <script>
-      function getCookie(cname) {
-        let name = cname + "=";
-        let ca = document.cookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == " ") {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-
-      function greetUser() {
-        const nameContainer = document.getElementById("active-user");
-        const welcomeContainer = document.getElementById("welcome");
-        const phoneContainer = document.getElementById("phone");
-
-        // console.log(nameContainer);
-        const nameCookie = getCookie("name");
-        const phoneCookie = getCookie("phone");
-
-        nameContainer.textContent = nameCookie;
-        phoneContainer.textContent = phoneCookie;
-        welcomeContainer.textContent = `Welcome ${nameCookie}`;
-      }
-
-      window.onload = greetUser();
-    </script>
-
-    <script>
-      const form = document.querySelector("form");
-      const btn = document.querySelector(".save-profile");
-
-      btn.addEventListener("click", async function (event) {
-        event.preventDefault();
-
-        const fullName = form.fullName.value;
-        const email = form.email.value;
-        const state = form.state.value;
-        const country = form.country.value;
-        const phone = form.number.value;
-        const address = form.address.value;
-
-        try {
-          const uidCookie = getCookie("uid");
-          const response = await fetch(
-            `https://trash-point.onrender.com/user/update/${uidCookie}`,
-            {
-              method: "PUT",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                fullName,
-                email,
-                state,
-                country,
-                phone,
-                address,
-              }),
-            }
-          );
-          const data = await response.json();
-          console.log(data.success);
-
-          // console.log(data);
-          if (data.success) {
-            console.log(data);
-            window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
-          } else {
-            console.log("Update user failed:", data.message);
-            displayErrorMessage(data.message);
-          }
-        } catch (error) {
-          console.log("Error during user update:", error);
-          displayErrorMessage(data.message);
-        }
-        function displayErrorMessage(message) {
-          document.getElementById("errorMessage").innerText = message;
-        }
-      })
-    </script>
+      <div id="chartContainer">
+        <canvas id="myChart"></canvas>
+      </div>
 
      
-  </body>
+      </div>
+    </section>
+    </section>
+
+    <section class="section4">
+      <img class="paystack" src="/images/paystack.png" alt="" />
+      <a class="pay-paystack" href="https://paystack.com/pay/381zr79ynz">Pay with Paystack</a>
+    </section>
+  </main>
+  <script>
+    const ctx = document.getElementById("myChart");
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const data = {
+      labels: months,
+      datasets: [
+        {
+          label: "TRASH DISPOSED IN 2023",
+          data: [11, 78, 41, 20, 60, 12, 21, 31, 16, 81, 26, 31],
+          backgroundColor: ["rgba(9,62,26,1)"],
+          borderColor: ["rgba(9,62,26,1)"],
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    const chart = new Chart(ctx, {
+      type: "bar",
+      data: data,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: true,
+          position: "bottom",
+        },
+        scales: {
+          xAxes: [
+            {
+              stacked: true,
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  </script>
+
+  <script>
+    function getCookie(cname) {
+      let name = cname + "=";
+      let ca = document.cookie.split(";");
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function greetUser() {
+      const nameContainer = document.getElementById("active-user");
+      const welcomeContainer = document.getElementById("welcome");
+      const phoneContainer = document.getElementById("phone");
+
+      // console.log(nameContainer);
+      const nameCookie = getCookie("name");
+      const phoneCookie = getCookie("phone");
+
+      nameContainer.textContent = nameCookie;
+      phoneContainer.textContent = phoneCookie;
+      welcomeContainer.textContent = `Welcome ${nameCookie}`;
+    }
+
+    window.onload = greetUser();
+  </script>
+
+  <script>
+    const form = document.querySelector("form");
+    const btn = document.querySelector(".save-profile");
+
+    btn.addEventListener("click", async function (event) {
+      event.preventDefault();
+
+      const fullName = form.fullName.value;
+      const email = form.email.value;
+      const state = form.state.value;
+      const country = form.country.value;
+      const phone = form.number.value;
+      const address = form.address.value;
+
+      try {
+        const uidCookie = getCookie("uid");
+        const response = await fetch(
+          `https://trash-point.onrender.com/user/update/${uidCookie}`,
+          {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              fullName,
+              email,
+              state,
+              country,
+              phone,
+              address,
+            }),
+          }
+        );
+        const data = await response.json();
+        console.log(data.success);
+
+        // console.log(data);
+        if (data.success) {
+          console.log(data);
+          window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
+        } else {
+          console.log("Update user failed:", data.message);
+          displayErrorMessage(data.message);
+        }
+      } catch (error) {
+        console.log("Error during user update:", error);
+        displayErrorMessage(data.message);
+      }
+      function displayErrorMessage(message) {
+        document.getElementById("errorMessage").innerText = message;
+      }
+    })
+  </script>
+
+
+</body>
+
 </html>

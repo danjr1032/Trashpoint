@@ -504,6 +504,7 @@ h3 {
   font-size: 15px;
   color: var(--White);
   text-align: center;
+  margin-left: -20rem;
 }
 
 .p-footer {
@@ -511,4 +512,5 @@ h3 {
 }
 .attribution a {
   color: var(--special-color);
+  /* margin-left: -12rem; */
 }

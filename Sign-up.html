@@ -127,7 +127,7 @@
               
           const data = await response.json();
 
-          if (data) {
+          if (data.user) {
             setCookie('uid', data.user.userId, 60)
             setCookie('name', data.user.fullName, 60)
             setCookie('phone', data.user.phone, 60)

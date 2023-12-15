@@ -301,7 +301,7 @@
       datasets: [
         {
           label: "TRASH DISPOSED IN 2023",
-          data: [11, 78, 41, 20, 60, 12, 21, 31, 16, 81, 26, 31],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           backgroundColor: ["rgba(9,62,26,1)"],
           borderColor: ["rgba(9,62,26,1)"],
           borderWidth: 1,
@@ -406,10 +406,10 @@
           }
         );
         const data = await response.json();
-        console.log(data.success);
+        // console.log(data.success);
 
-        // console.log(data);
-        if (data.success) {
+        console.log(data);
+        if (data) {
           alert("Profile Updated successfully!");
           window.location.href = 'https://trashpoint.vercel.app/Sign-in.html';
           console.log(data);

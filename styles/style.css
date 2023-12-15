@@ -154,9 +154,6 @@ h3 {
   line-height: 3.5rem;
 }
 
-#active-class{
-  color: var(--special-color);
-}
 
 .logout {
   margin-top: 5rem;

@@ -250,7 +250,7 @@
     <section class="section3">
       <section class="stats">
         <div class="stat-card">
-         <p>🎉🎉 Congratulations your total waste pickup for the year is <i id="requestCount"></i></p>
+         <p>Total Request: <i id="requestCount"> 0 </i></p>
         </div>
         <!-- <div class="stat-card">
          <p> Total requests <i>0</i></p>
@@ -411,7 +411,7 @@
         // console.log(data);
         if (data.success) {
           alert("Profile Updated successfully!");
-          window.location.href = 'dashboardd.html';
+          window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
           console.log(data);
         } else {
           console.log("Update user failed:", data.message);

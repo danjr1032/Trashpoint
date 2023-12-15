@@ -415,11 +415,11 @@
           console.log(data);
         } else {
           console.log("Update user failed:", data.message);
-          displayErrorMessage(data.message);
+          // displayErrorMessage(data.message);
         }
       } catch (error) {
         console.log("Error during user update:", error);
-        displayErrorMessage(data.message);
+        // displayErrorMessage(data.message);
       }
       function displayErrorMessage(message) {
         document.getElementById("errorMessage").innerText = message;

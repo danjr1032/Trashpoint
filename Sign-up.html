@@ -127,12 +127,12 @@
               
           const data = await response.json();
 
-          if (data.success) {
+          if (data) {
             setCookie('uid', data.user.userId, 60)
             setCookie('name', data.user.fullName, 60)
             setCookie('phone', data.user.phone, 60)
-            alert("User signup successfully!");
             location.replace("dashboardd.html");
+            alert("User signup successfully!");
           } else {
               console.log('Error signing up user.');
           }

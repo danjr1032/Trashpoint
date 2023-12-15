@@ -137,7 +137,7 @@
     </section>
 
     <section class="second-section">
-      <div class="box">
+      <!-- <div class="box">
         <i class="uil uil-edit it"></i>
         <div class="inner-box">
           <p class="p">
@@ -244,7 +244,7 @@
           </p>
           <p class="p"><span class="bold">Time :</span> 4:10 PM</p>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="section3">
@@ -410,8 +410,9 @@
 
         // console.log(data);
         if (data.success) {
+          alert("Profile Updated successfully!");
+          window.location.href = 'dashboardd.html';
           console.log(data);
-          window.location.href = 'https://trashpoint.vercel.app/dashboardd.html';
         } else {
           console.log("Update user failed:", data.message);
           displayErrorMessage(data.message);
